@@ -1,0 +1,33 @@
+.example-container {
+    display: flex;
+  }
+
+  .box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+  }
+  
+  .formCard {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .example-container > * {
+    width: 100%;
+  }
+
+  .card {
+    max-width: 700px;
+    width: 500px;
+  }
+
+  .head {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 30px;
+    font-weight: 500;
+  }

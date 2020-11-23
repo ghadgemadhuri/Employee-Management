@@ -1,0 +1,25 @@
+<h1>Employee List</h1>
+<div class="box">
+    <mat-card class="card" *ngFor="let emp of empList; let i = index;">
+        <div class="formCard">
+            <mat-card-header>
+                <!-- <div mat-card-avatar class="example-header-image"></div> -->
+                <mat-icon mat-card-avatar style="font-size: 47px; margin-right: 10px;">person</mat-icon>
+
+                <mat-card-title>{{emp.fullName}}</mat-card-title>
+                <mat-card-subtitle>{{emp.position}}</mat-card-subtitle>
+                <mat-icon mat-card-avatar class="close" (click)="deleteEmp(i)">cancel
+                </mat-icon>
+            </mat-card-header>
+            <mat-card-content>
+                <p class="about"> {{emp.about}}</p>
+            </mat-card-content>
+            <mat-card-actions>
+
+                <p><span class="joindate">JOINING DATE: </span> {{emp.joiningDate | date: 'dd/MM/yyyy'}}</p>
+
+            </mat-card-actions>
+        </div>
+    </mat-card>
+</div>
+<button mat-fab color="primary" class="corner-button" title="Add new" routerLink="/employee/register">+</button>
