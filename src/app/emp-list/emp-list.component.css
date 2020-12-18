@@ -39,12 +39,20 @@
   .close {
     position: absolute;
     top: 8px;
-    right: 12px;
+    right: 10px;
     cursor: pointer;
     font-size: 30px;
   }
 
-  .joindate {
+  .edit {
+    position: absolute;
+    top: 5px;
+    right:42px;
+    cursor: pointer;
+    font-size: 30px;
+  }
+
+.joindate {
       font-size: 14px;
       font-weight: 600;
       color: red;

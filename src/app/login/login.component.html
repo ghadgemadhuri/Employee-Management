@@ -1,0 +1,24 @@
+<h1 style="text-align: center;"> Login</h1>
+<div class="box" [formGroup]="loginForm">
+    <mat-card class="card">
+        <div class="formCard">
+            <mat-form-field>
+                <input matInput placeholder="Username" formControlName="username">
+                <mat-error *ngIf="submitted && this.formControl.username?.errors?.required">This field is required
+                </mat-error>
+            </mat-form-field>
+
+            <mat-form-field>
+                <input matInput placeholder="Password" formControlName="password" type="password">
+                <mat-error *ngIf="submitted && this.formControl.password?.errors?.required">This field is required
+                </mat-error>
+
+            </mat-form-field>
+            <button mat-raised-button color="primary" (click)="login()">Login</button>
+        </div>
+    </mat-card>
+</div>
+
+<div class="loading-indicator" *ngIf="loader">
+  <mat-progress-spinner mode="indeterminate" color="accent"></mat-progress-spinner>
+</div>

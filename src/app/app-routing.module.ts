@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { EmpListComponent } from './emp-list/emp-list.component';
 import { EmpRegistrationComponent } from './emp-registration/emp-registration.component';
-
+import { LoginComponent } from './login/login.component';
 
 const routes: Routes = [
   {
@@ -14,13 +14,18 @@ const routes: Routes = [
     component: EmpListComponent,
   },
   {
+  path: 'employee/login',
+    component: LoginComponent,
+
+  },
+  {
     path: '',
-    redirectTo: 'employee/register',
+    redirectTo: 'employee/login',
     pathMatch: 'full'
   },
   {
     path: '**',
-    redirectTo: 'employee/register',
+    redirectTo: 'employee/login',
     pathMatch: 'full'
 
   }

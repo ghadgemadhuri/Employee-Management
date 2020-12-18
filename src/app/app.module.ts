@@ -11,12 +11,22 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatSelectModule } from '@angular/material/select';
 import { MatButtonModule, MatCardAvatar, MatCardModule, MatDialogModule, MatIconModule, MatInputModule, MatNativeDateModule } from '@angular/material';
 import { MatDatepickerModule } from '@angular/material/datepicker';
+import {MatSnackBarModule} from '@angular/material/snack-bar';
+import {ServiceService} from './common/service.service';
+import { DeleteDialogComponent } from './utility/delete-dialog/delete-dialog.component';
+import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
+import { LoginComponent } from './login/login.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     EmpRegistrationComponent,
-    EmpListComponent
+    EmpListComponent,
+    DeleteDialogComponent,
+    LoginComponent
+  ],
+  entryComponents: [
+    DeleteDialogComponent
   ],
   imports: [
     BrowserModule,
@@ -32,9 +42,12 @@ import { MatDatepickerModule } from '@angular/material/datepicker';
     MatIconModule,
     MatDialogModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    MatSnackBarModule,
+    MatDialogModule,
+    MatProgressSpinnerModule
   ],
-  providers: [],
+  providers: [ServiceService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
